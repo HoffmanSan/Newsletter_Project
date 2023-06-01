@@ -7,10 +7,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+require('dotenv').config();
 //-----------MAILCHIMP API------------------------------------------
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 mailchimp.setConfig({
-    apiKey: "63926c30f5b4c367d9c83c640fd47b1e-us21",
+    apiKey: process.env.API_KEY,
     server: "us21",
   });
 

@@ -10,7 +10,7 @@ app.use(express.static("public"));
 //-----------MAILCHIMP API------------------------------------------
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 mailchimp.setConfig({
-    apiKey: "78cd799a60397a7ef2e02ec8cc454993-us21",
+    apiKey: "63926c30f5b4c367d9c83c640fd47b1e-us21",
     server: "us21",
   });
 
@@ -65,9 +65,3 @@ app.post("/failure", function(req, res) {
 app.listen(3000, function() {
     console.log("The server is running on port 3000");
 });
-
-// API Key Mail Chimp
-// 78cd799a60397a7ef2e02ec8cc454993-us21
-
-// List ID
-// 4ea7cc507e
